@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -33,6 +34,23 @@ namespace pixCellDivision
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+        }
+
+        private async void ScrollViewer_ManipulationStarted_1(object sender, ManipulationStartedRoutedEventArgs e)
+        {
+            /*MessageDialog dialog = new MessageDialog("test", "test2");
+            await dialog.ShowAsync();*/
+        }
+
+        private void Zoom_Out(object sender, RoutedEventArgs e)
+        {
+            float newZoomFactor = Math.Max(1.0f, DrawingContainer.ZoomFactor - 1);
+            DrawingContainer.ZoomToFactor(newZoomFactor);
+        }
+
+        private void Zoom_In(object sender, RoutedEventArgs e)
+        {
+            DrawingContainer.ZoomToFactor(DrawingContainer.ZoomFactor + 1);
         }
     }
 }

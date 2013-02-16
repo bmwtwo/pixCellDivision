@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MACBOOK_PRO</Machine>
+    <WindowsUser>Brendan</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>3DB881F50F57F94B7C3845694EFF2FAC37D5B3E5716EA647EF74287989F1696D</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>78813565-0e87-4dda-8607-b001757b32e4_1.0.0.0_neutral__w5bkc1agwr34r</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>78813565-0e87-4dda-8607-b001757b32e4_w5bkc1agwr34r!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>78813565-0e87-4dda-8607-b001757b32e4</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Brendan</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="c:\users\brendan\documents\visual studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-02-16T03:52:59.961</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="c:\users\brendan\documents\visual studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.exe">
+      <PackagePath>pixCellDivision.exe</PackagePath>
+      <Modified>2013-02-16T04:02:33.723</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\brendan\documents\visual studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.pdb">
+      <PackagePath>pixCellDivision.pdb</PackagePath>
+      <Modified>2013-02-16T04:02:33.703</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\brendan\documents\visual studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T04:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\brendan\documents\visual studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T04:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\brendan\documents\visual studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T04:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\brendan\documents\visual studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-16T04:42:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\brendan\documents\visual studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-02-16T03:52:21.984</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\brendan\documents\visual studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2012-06-27T00:19:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\brendan\documents\visual studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+      <Modified>2013-02-16T04:02:32.851</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\brendan\documents\visual studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-02-16T03:52:59.399</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

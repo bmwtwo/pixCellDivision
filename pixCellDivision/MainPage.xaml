@@ -8,8 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Button Content="Split Horizontally" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="114" Width="276" />
-        <Button Content="Split Vertically" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Height="114" Width="276" />
+        <Button x:Name="horizontalSplitButton" Content="Split Horizontally" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Height="114" Width="276" Click="Horizontal_Split" IsEnabled="False" />
+        <Button x:Name="verticalSplitButton" Content="Split Vertically" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="114" Width="276" IsEnabled="False" Click="Vertical_Split" />
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="10,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="65,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="120,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
@@ -25,7 +25,13 @@
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="120,358,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="175,358,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="230,358,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
-        <ScrollViewer HorizontalAlignment="Right" Height="768" Margin="747,0,0,0" VerticalAlignment="Center" Width="768"/>
+        <ScrollViewer x:Name="DrawingContainer" HorizontalAlignment="Right" Height="768" VerticalAlignment="Center" Width="768" ManipulationStarted="ScrollViewer_ManipulationStarted_1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Canvas x:Name="DrawingCanvas" Height="768" Width="768">
+                <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="768" Stroke="Black" VerticalAlignment="Top" Width="768" Tapped="Rectangle_Tapped"/>
+            </Canvas>
+        </ScrollViewer>
+        <Button Content="+" HorizontalAlignment="Left" Margin="293,13,0,0" VerticalAlignment="Top" Height="114" Width="114" Click="Zoom_In" />
+        <Button Content="-" HorizontalAlignment="Left" Margin="415,12,0,0" VerticalAlignment="Top" Height="114" Width="114" Click="Zoom_Out" />
 
     </Grid>
 </Page>

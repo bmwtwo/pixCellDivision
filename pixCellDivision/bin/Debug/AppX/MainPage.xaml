@@ -8,7 +8,30 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Right" Height="768" Margin="342,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="768"/>
+        <Button x:ConnectionId='1' x:Name="horizontalSplitButton" Content="Split Horizontally" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Height="114" Width="276"                          IsEnabled="False" />
+        <Button x:ConnectionId='2' x:Name="verticalSplitButton" Content="Split Vertically" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="114" Width="276" IsEnabled="False"                        />
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="10,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="65,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="120,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="175,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="230,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="10,303,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="65,303,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="120,303,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="175,303,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="230,303,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="10,358,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="65,358,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="120,358,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="175,358,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="230,358,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+        <ScrollViewer x:ConnectionId='3' x:Name="DrawingContainer" HorizontalAlignment="Right" Height="768" VerticalAlignment="Center" Width="768"                                                          HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Canvas x:Name="DrawingCanvas" Height="768" Width="768">
+                <Rectangle x:ConnectionId='6' Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="768" Stroke="Black" VerticalAlignment="Top" Width="768"                          />
+            </Canvas>
+        </ScrollViewer>
+        <Button x:ConnectionId='4' Content="+" HorizontalAlignment="Left" Margin="293,13,0,0" VerticalAlignment="Top" Height="114" Width="114"                 />
+        <Button x:ConnectionId='5' Content="-" HorizontalAlignment="Left" Margin="415,12,0,0" VerticalAlignment="Top" Height="114" Width="114"                  />
 
     </Grid>
 </Page>

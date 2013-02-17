@@ -1,62 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>MACBOOK_PRO</Machine>
-    <WindowsUser>Brendan</WindowsUser>
+    <Machine>SALVADOR</Machine>
+    <WindowsUser>smthr_000</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.exe">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.exe">
       <PackagePath>pixCellDivision.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.pdb">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.pdb">
       <PackagePath>pixCellDivision.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Horizantalna.png">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\Horizantalna.png">
       <PackagePath>Assets\Horizantalna.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\PlayMac.png">
+      <PackagePath>Assets\PlayMac.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\REC.png">
+      <PackagePath>Assets\REC.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\StopRec.png">
+      <PackagePath>Assets\StopRec.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Vertical.png">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\Vertical.png">
       <PackagePath>Assets\Vertical.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Zoomin.png">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\Zoomin.png">
       <PackagePath>Assets\Zoomin.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Zoomout.png">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\Zoomout.png">
       <PackagePath>Assets\Zoomout.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\App.xaml">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\Common\StandardStyles.xaml">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\MainPage.xaml">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

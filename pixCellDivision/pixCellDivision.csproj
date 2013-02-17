@@ -120,8 +120,11 @@
   <ItemGroup>
     <Content Include="Assets\Horizantalna.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\PlayMac.png" />
+    <Content Include="Assets\REC.png" />
     <Content Include="Assets\SmallLogo.png" />
     <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\StopRec.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Vertical.png" />
     <Content Include="Assets\Zoomin.png" />

@@ -29,6 +29,14 @@ namespace pixCellDivision
         SolidColorBrush DEFAULT_STROKE  = new SolidColorBrush(Colors.LightGray);
         SolidColorBrush SELECTED_STROKE = new SolidColorBrush(Colors.Black);
 
+        String[] macro;
+        Boolean rec_state = false;
+        Rectangle[] rec_children;
+        Boolean recorded = false;
+        Boolean runningmac = false;
+        Rectangle[] running_array;
+        int child_index;
+
         // record undo type
         Stack<Boolean> undoIsColor            = new Stack<Boolean>();
         // record details of color undos
@@ -90,8 +98,17 @@ namespace pixCellDivision
             selectedRectangle.Stroke = DEFAULT_STROKE;
             senderRect.Stroke = SELECTED_STROKE;
             selectedRectangle = senderRect;
-        } 
 
+            if (rec_state)
+            {
+                int srcindex = 0;
+                for (int i = 0; i < child_index; i++)
+                    if (selectedRectangle.Equals(rec_children[i]))
+                        srcindex = i;
+                macro[child_index] += srcindex + "";
+                RecInst.Text = "Split the rectangle.";
+            }   
+        }
         private void Core_KeyDown(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
         {
             if (args.VirtualKey == Windows.System.VirtualKey.H)
@@ -130,6 +147,14 @@ namespace pixCellDivision
             performCommonSplitTasks(oldRect, newRect);
 
             oldRect.Height = newHeight;
+            if (rec_state)
+            {
+                rec_children[child_index + 1] = newRect;
+                macro[child_index] += "h";
+                RecInst.Text = "Pick a color.";
+            }
+            if (runningmac)
+                running_array[child_index + 1] = newRect;
         }
 
         private void Ver_Split(Rectangle oldRect)
@@ -149,6 +174,17 @@ namespace pixCellDivision
             performCommonSplitTasks(oldRect, newRect);
 
             oldRect.Width = newWidth;
+            if (rec_state)
+            {
+                rec_children[child_index + 1] = newRect;
+                macro[child_index] += "v";
+                RecInst.Text = "Pick a color.";
+            }
+            if (runningmac)
+            {
+                running_array[child_index + 1] = newRect;
+                child_index++;
+            }
         }
 
 		private void onButtonClick(object sender, RoutedEventArgs e) 
@@ -206,6 +242,14 @@ namespace pixCellDivision
 					break;
 			}
 
+            if (rec_state)
+            {
+                macro[child_index] += senderButton.Content;
+                child_index++;
+                RecInst.Text = "Pick a rectangle.";
+            }
+
+
             SolidColorBrush brush = new SolidColorBrush(newColor);
             undoIsColor.Push(true);
             undoColorBrush.Push(selectedRectangle.Fill as SolidColorBrush);
@@ -215,6 +259,69 @@ namespace pixCellDivision
 
             selectedRectangle.Fill = brush;
 		}
+
+        private void recMacro(object sender, RoutedEventArgs e)
+        {
+            macro = new String[10];
+            rec_children = new Rectangle[10];
+            child_index = 0;
+            rec_state = true;
+            RecInst.Text = "The Macro has started: Please do things in the following order. Pick, Split, Color.";
+            RecInst.Visibility = Visibility.Visible;
+        }
+
+        private void stopMacro(object sender, RoutedEventArgs e)
+        {
+            if (!recorded)
+                RecInst.Text = "You have not recorded a macro. There is nothing to stop.";
+            if (rec_state)
+                rec_state = false;
+            RecInst.Text = "Your macro has stopped recording.";
+            recorded = true;
+        }
+
+        private void PlayMacro(object sender, RoutedEventArgs e)
+        {
+            if (!recorded)
+                RecInst.Text = "You have not recorded a macro to play yet.";
+            runningmac = true;
+            Rectangle current;
+            running_array = new Rectangle[10];
+            running_array[0] = selectedRectangle;
+            int times = child_index;
+            for (int i = 0; i < times; i++)
+            {
+                child_index = 0;
+                current = running_array[int.Parse(macro[i][0] + "")];
+                switch (macro[i][1])
+                {
+                    case 'h': Hor_Split(current); break;
+                    case 'v': Ver_Split(current); break;
+                }
+                switch (macro[i].Substring(2, 2))
+                {
+                    case "Gr": current.Fill = new SolidColorBrush(Colors.Gray); break;
+                    case "Re": current.Fill = new SolidColorBrush(Colors.Red); break;
+                    case "Bl": current.Fill = new SolidColorBrush(Colors.Blue); break;
+                    case "Gn": current.Fill = new SolidColorBrush(Colors.Green); break;
+                    case "Br": current.Fill = new SolidColorBrush(Colors.Brown); break;
+                    case "Or": current.Fill = new SolidColorBrush(Colors.Orange); break;
+                    case "Te": current.Fill = new SolidColorBrush(Colors.Teal); break;
+                    case "Ma": current.Fill = new SolidColorBrush(Colors.Magenta); break;
+                    case "Li": current.Fill = new SolidColorBrush(Colors.Lime); break;
+                    case "Pu": current.Fill = new SolidColorBrush(Colors.Purple); break;
+                    case "Pi": current.Fill = new SolidColorBrush(Colors.Pink); break;
+                    case "Cy": current.Fill = new SolidColorBrush(Colors.Cyan); break;
+                    case "Dg": current.Fill = new SolidColorBrush(Colors.DarkGreen); break;
+                    case "Bk": current.Fill = new SolidColorBrush(Colors.Black); break;
+                    case "Wh": current.Fill = new SolidColorBrush(Colors.White); break;
+                }
+            }
+            runningmac = false;
+            child_index = times;
+        }
+
+
 
         private void Undo_Click(object sender, RoutedEventArgs e)
         {
@@ -248,6 +355,7 @@ namespace pixCellDivision
             }
 
             if (undoIsColor.Count == 0) UndoButton.IsEnabled = false;
+
         }
     }
 }

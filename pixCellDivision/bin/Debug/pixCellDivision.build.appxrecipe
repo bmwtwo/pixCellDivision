@@ -26,6 +26,12 @@
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\PlayMac.png">
+      <PackagePath>Assets\PlayMac.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\REC.png">
+      <PackagePath>Assets\REC.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -33,6 +39,9 @@
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\StopRec.png">
+      <PackagePath>Assets\StopRec.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>

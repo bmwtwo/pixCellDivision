@@ -5,7 +5,7 @@
     <WindowsUser>Brendan</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <RegisteredManifestChecksum>FFB294E210AB5C9F39601B6B4EB6635A8970159F41AD7DC69BDB9A72583FB507</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>073AC6A73675B33776BD05FA95225D0BD9C3D2F4BB41D696F9501CF03D8CFAC7</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>78813565-0e87-4dda-8607-b001757b32e4_1.0.0.0_neutral__w5bkc1agwr34r</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>78813565-0e87-4dda-8607-b001757b32e4_w5bkc1agwr34r!App</RegisteredUserModeAppID>
     <RegisteredPackageID>78813565-0e87-4dda-8607-b001757b32e4</RegisteredPackageID>
@@ -16,37 +16,49 @@
     <AppXManifest Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-02-17T12:15:34.316</Modified>
+      <Modified>2013-02-17T13:37:32.492</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.exe">
       <PackagePath>pixCellDivision.exe</PackagePath>
-      <Modified>2013-02-17T12:15:34.217</Modified>
+      <Modified>2013-02-17T13:39:13.704</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.pdb">
       <PackagePath>pixCellDivision.pdb</PackagePath>
-      <Modified>2013-02-17T12:15:34.160</Modified>
+      <Modified>2013-02-17T13:39:13.684</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Cityscape.jpg">
+      <PackagePath>Assets\Cityscape.jpg</PackagePath>
+      <Modified>2013-02-17T13:29:41.088</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Cityscape2.jpeg">
+      <PackagePath>Assets\Cityscape2.jpeg</PackagePath>
+      <Modified>2013-02-17T13:34:22.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-16T04:42:52.000</Modified>
+      <Modified>2013-02-17T13:15:12.508</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Paris.png">
+      <PackagePath>Assets\Paris.png</PackagePath>
+      <Modified>2013-02-17T13:37:22.072</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-16T04:42:52.000</Modified>
+      <Modified>2013-02-17T12:58:42.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-16T04:42:52.000</Modified>
+      <Modified>2013-02-17T13:21:39.346</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\WideLogo.png">
+      <PackagePath>Assets\WideLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-16T04:42:52.000</Modified>
+      <Modified>2013-02-17T13:11:27.045</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
@@ -58,11 +70,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2013-02-17T12:13:59.238</Modified>
+      <Modified>2013-02-17T13:39:10.634</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-02-17T12:12:21.718</Modified>
+      <Modified>2013-02-17T13:37:32.438</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

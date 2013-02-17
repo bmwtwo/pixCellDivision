@@ -36,12 +36,15 @@
             </Grid>
         </AppBar>
     </Page.TopAppBar>
-    <Grid x:Name="MainGrid" AllowDrop="True" Background="Black" >
+    <Grid x:Name="MainGrid" AllowDrop="True" >
+        <Grid.Background>
+            <ImageBrush ImageSource="Assets/Paris.png"/>
+        </Grid.Background>
 
         <ScrollViewer x:Name="DrawingContainer" HorizontalAlignment="Right" Margin="0,0,15,0" Height="768" VerticalAlignment="Center" Width="768" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <Border Background="#FFA09C9C" HorizontalAlignment="Center" VerticalAlignment="Center" Width="768" Height="768">
                 <Canvas x:Name="DrawingCanvas" Height="748" Width="748" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Rectangle x:ConnectionId='24' x:Name="First_Rectangle" Fill="White" HorizontalAlignment="Left" Height="748" VerticalAlignment="Top" Width="748"                           Stroke="Black"/>
+                    <Rectangle x:ConnectionId='24' x:Name="First_Rectangle" Fill="Gray" HorizontalAlignment="Left" Height="748" VerticalAlignment="Top" Width="748"                           Stroke="Black"/>
                 </Canvas>
             </Border>
         </ScrollViewer>

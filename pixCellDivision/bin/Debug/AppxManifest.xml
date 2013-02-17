@@ -22,9 +22,9 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="pixCellDivision.exe" EntryPoint="pixCellDivision.App">
-      <VisualElements DisplayName="pixCellDivision" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="pixCellDivision" ForegroundText="light" BackgroundColor="green">
-        <DefaultTile ShowName="allLogos" ShortName="pixCellDivision" />
-        <SplashScreen Image="Assets\SplashScreen.png" />
+      <VisualElements DisplayName="pixCellDivision" Logo="Assets\Logo.png" SmallLogo="Assets\SmallLogo.png" Description="pixCellDivision" ForegroundText="light" BackgroundColor="black">
+        <DefaultTile ShowName="noLogos" ShortName="pixCellDivision" WideLogo="Assets\WideLogo.png" />
+        <SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="black" />
         <InitialRotationPreference>
           <Rotation Preference="landscape" />
         </InitialRotationPreference>

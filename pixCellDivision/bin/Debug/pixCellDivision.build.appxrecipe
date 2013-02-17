@@ -19,6 +19,9 @@
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.pdb">
       <PackagePath>pixCellDivision.pdb</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Horizantalna.png">
+      <PackagePath>Assets\Horizantalna.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -34,6 +37,15 @@
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Vertical.png">
+      <PackagePath>Assets\Vertical.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Zoomin.png">
+      <PackagePath>Assets\Zoomin.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Zoomout.png">
+      <PackagePath>Assets\Zoomout.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>

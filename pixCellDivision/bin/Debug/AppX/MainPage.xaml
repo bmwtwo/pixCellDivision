@@ -36,35 +36,37 @@
       
         <Border BorderThickness="1" HorizontalAlignment="Left" Height="770" Margin="15,0,0,0" VerticalAlignment="Center" Width="255" Background="#FFC3C0C0">
             <Grid HorizontalAlignment="Left" Height="770" Margin="0,0,0,0" VerticalAlignment="Top" Width="255">
-              <Button x:ConnectionId='4' x:Name="verticalSplitButton" HorizontalAlignment="Left" Margin="135,95,0,0" VerticalAlignment="Top" Height="100" Width="100"                                Padding="0" BorderBrush="{x:Null}" BorderThickness="0">
+              <Button x:ConnectionId='4' x:Name="verticalSplitButton" HorizontalAlignment="Left" Margin="135,95,0,0" VerticalAlignment="Top" Height="100" Width="100"                                Padding="0" BorderBrush="{x:Null}" BorderThickness="0" Background="#FF8B00FF">
                   <Image Source="Assets/Horizantalna.png" />
               </Button>
-              <Button x:ConnectionId='5' x:Name="horizontalSplitButton" HorizontalAlignment="Left" Margin="20,95,0,0" VerticalAlignment="Top" Height="100" Width="100"                                  Padding="0" BorderThickness="0">
-                  <Image Source="Assets/Vertical.png" />
-              </Button>
-              <Button x:ConnectionId='6' x:Name="grayButton" Background="Gray" Content="Gr" HorizontalAlignment="Left" Height="50" Margin="75,593,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='7' x:Name="redButton" Background="Red" Content="Re" HorizontalAlignment="Left" Height="50" Margin="185,483,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='8' x:Name="blueButton" Background="Blue" Content="Bl" HorizontalAlignment="Left" Height="50" Margin="20,428,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       RenderTransformOrigin="1,0.3" Padding="0"  />
-              <Button x:ConnectionId='9' x:Name="greenButton" Background="Green" Content="Gn" HorizontalAlignment="Left" Height="50" Margin="130,538,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='10' x:Name="brownButton" Background="Brown" Content="Br" HorizontalAlignment="Left" Height="50" Margin="185,428,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='11' x:Name="orangeButton" Background="Orange" Content="Or" HorizontalAlignment="Left" Height="50" Margin="75,483,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='12' x:Name="tealButton" Background="Teal" Content="Te" HorizontalAlignment="Left" Height="50" Margin="20,483,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='13' x:Name="magentaButton" Background="Magenta" Content="Ma" HorizontalAlignment="Left" Height="50" Margin="130,428,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='14' x:Name="limeButton" Background="Lime" Content="Li" HorizontalAlignment="Left" Height="50" Margin="75,538,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='15' x:Name="purpleButton" Background="Purple" Content="Pu" HorizontalAlignment="Left" Height="50" Margin="75,428,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='16' x:Name="pinkButton" Background="Pink" Content="Pi" HorizontalAlignment="Left" Height="50" Margin="130,483,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='17' x:Name="cyanButton" Background="Cyan" Content="Cy" HorizontalAlignment="Left" Height="50" Margin="20,538,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='18' x:Name="darkGreenButton" Background="DarkGreen" Content="Dg" HorizontalAlignment="Left" Height="50" Margin="185,538,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='19' x:Name="blackButton" Background="Black" Content="Bk" HorizontalAlignment="Left" Height="50" Margin="20,593,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
-              <Button x:ConnectionId='20' x:Name="whiteButton" Background="White" Content="Wh" HorizontalAlignment="Left" Height="50" Margin="130,593,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Foreground="Black" Padding="0" BorderBrush="Black"  />
-              <Button x:ConnectionId='21' HorizontalAlignment="Left" Margin="20,200,0,0" VerticalAlignment="Top" Height="100" Width="100"                 Padding="0" BorderThickness="0">
+                <Button x:ConnectionId='5' x:Name="grayButton" Background="Gray" Content="Gr" HorizontalAlignment="Left" Height="50" Margin="75,593,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='6' x:Name="redButton" Background="Red" Content="Re" HorizontalAlignment="Left" Height="50" Margin="185,483,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='7' x:Name="blueButton" Background="Blue" Content="Bl" HorizontalAlignment="Left" Height="50" Margin="20,428,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       RenderTransformOrigin="1,0.3" Padding="0"  />
+              <Button x:ConnectionId='8' x:Name="greenButton" Background="Green" Content="Gn" HorizontalAlignment="Left" Height="50" Margin="130,538,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='9' x:Name="brownButton" Background="Brown" Content="Br" HorizontalAlignment="Left" Height="50" Margin="185,428,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='10' x:Name="orangeButton" Background="Orange" Content="Or" HorizontalAlignment="Left" Height="50" Margin="75,483,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='11' x:Name="tealButton" Background="Teal" Content="Te" HorizontalAlignment="Left" Height="50" Margin="20,483,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='12' x:Name="magentaButton" Background="Magenta" Content="Ma" HorizontalAlignment="Left" Height="50" Margin="130,428,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='13' x:Name="limeButton" Background="Lime" Content="Li" HorizontalAlignment="Left" Height="50" Margin="75,538,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='14' x:Name="purpleButton" Background="Purple" Content="Pu" HorizontalAlignment="Left" Height="50" Margin="75,428,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='15' x:Name="pinkButton" Background="Pink" Content="Pi" HorizontalAlignment="Left" Height="50" Margin="130,483,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='16' x:Name="cyanButton" Background="Cyan" Content="Cy" HorizontalAlignment="Left" Height="50" Margin="20,538,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='17' x:Name="darkGreenButton" Background="DarkGreen" Content="Dg" HorizontalAlignment="Left" Height="50" Margin="185,538,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='18' x:Name="blackButton" Background="Black" Content="Bk" HorizontalAlignment="Left" Height="50" Margin="20,593,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Padding="0"  />
+              <Button x:ConnectionId='19' x:Name="whiteButton" Background="White" Content="Wh" HorizontalAlignment="Left" Height="50" Margin="130,593,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Foreground="Black" Padding="0" BorderBrush="Black"  />
+              <Button x:ConnectionId='20' HorizontalAlignment="Left" Margin="20,200,0,0" VerticalAlignment="Top" Height="100" Width="100"                 Padding="0" BorderThickness="0">
                   <Image Source="Assets/Zoomin.png" />
               </Button>
-              <Button x:ConnectionId='22' HorizontalAlignment="Left" Margin="135,200,0,0" VerticalAlignment="Top" Height="100" Width="100"                  Padding="0" BorderThickness="0">
+              <Button x:ConnectionId='21' HorizontalAlignment="Left" Margin="135,200,0,0" VerticalAlignment="Top" Height="100" Width="100"                  Padding="0" BorderThickness="0">
                   <Image Source="Assets/Zoomout.png" />
               </Button>
-              <Button x:ConnectionId='23' x:Name="UndoButton" Content="Undo" HorizontalAlignment="Left" Margin="20,305,0,0" VerticalAlignment="Top" Height="100" Width="100"                    IsEnabled="False"/>
-          </Grid>
+                <Button x:ConnectionId='22' x:Name="UndoButton" HorizontalAlignment="Left" Margin="20,305,0,0" VerticalAlignment="Top" Height="100" Width="100"                    IsEnabled="False" Padding="0" BorderThickness="0">
+                <Image Source="Assets/Undo.png" />
+                </Button>
+                <Button x:ConnectionId='23' x:Name="horizontalSplitButton" HorizontalAlignment="Left" Margin="20,95,0,0" VerticalAlignment="Top" Height="100" Width="100"                                  Padding="0" BorderThickness="0" Background="#FFFB0404">
+                    <Image Source="Assets/Horizontal.png" />
+                </Button>
+            </Grid>
         </Border>
     </Grid>
 </Page>

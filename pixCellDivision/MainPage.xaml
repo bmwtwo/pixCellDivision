@@ -7,28 +7,28 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Background="#FFFF2929">
 
-    <Grid x:Name="MainGrid" Background="#FFA09C9C" >
+    <Grid x:Name="MainGrid" Background="#FFA09C9C" AllowDrop="True" >
         <Button x:Name="verticalSplitButton" HorizontalAlignment="Left" Margin="125,15,0,0" VerticalAlignment="Top" Height="100" Width="100" Click="Vertical_Split_Clicked" Padding="0" BorderBrush="{x:Null}" BorderThickness="0">
             <Image Source="Assets/Horizantalna.png" />
         </Button>
         <Button x:Name="horizontalSplitButton" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="100" Width="100" Click="Horizontal_Split_Clicked" Padding="0" BorderThickness="0">
             <Image Source="Assets/Vertical.png" />  
         </Button>
-      <Button x:Name="grayButton" Background="Gray" Content="Gray" HorizontalAlignment="Left" Height="50" Margin="10,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="redButton" Background="Red" Content="Red" HorizontalAlignment="Left" Height="50" Margin="65,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="blueButton" Background="Blue" Content="Blue" HorizontalAlignment="Left" Height="50" Margin="120,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="greenButton" Background="Green" Content="Green" HorizontalAlignment="Left" Height="50" Margin="175,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="brownButton" Background="Brown" Content="Brown" HorizontalAlignment="Left" Height="50" Margin="230,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="orangeButton" Background="Orange" Content="Orange" HorizontalAlignment="Left" Height="50" Margin="10,303,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="tealButton" Background="Teal" Content="Teal" HorizontalAlignment="Left" Height="50" Margin="65,303,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="magentaButton" Background="Magenta" Content="Magenta" HorizontalAlignment="Left" Height="50" Margin="120,303,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="limeButton" Background="Lime" Content="Lime" HorizontalAlignment="Left" Height="50" Margin="175,303,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="purpleButton" Background="Purple" Content="Purple" HorizontalAlignment="Left" Height="50" Margin="230,303,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="pinkButton" Background="Pink" Content="Pink" HorizontalAlignment="Left" Height="50" Margin="10,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="cyanButton" Background="Cyan" Content="Cyan" HorizontalAlignment="Left" Height="50" Margin="65,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="darkGreenButton" Background="DarkGreen" Content="DarkGreen" HorizontalAlignment="Left" Height="50" Margin="120,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="blackButton" Background="Black" Content="Black" HorizontalAlignment="Left" Height="50" Margin="175,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
-      <Button x:Name="whiteButton" Background="White" Content="White" HorizontalAlignment="Left" Height="50" Margin="230,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="grayButton" Background="Gray" HorizontalAlignment="Left" Height="50" Margin="10,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="redButton" Background="Red" HorizontalAlignment="Left" Height="50" Margin="65,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="blueButton" Background="Blue" HorizontalAlignment="Left" Height="50" Margin="120,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="greenButton" Background="Green" HorizontalAlignment="Left" Height="50" Margin="175,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="brownButton" Background="Brown" HorizontalAlignment="Left" Height="50" Margin="230,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="orangeButton" Background="Orange" HorizontalAlignment="Left" Height="50" Margin="10,303,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="tealButton" Background="Teal" HorizontalAlignment="Left" Height="50" Margin="65,303,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="magentaButton" Background="Magenta" HorizontalAlignment="Left" Height="50" Margin="120,303,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="limeButton" Background="Lime" HorizontalAlignment="Left" Height="50" Margin="175,303,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="purpleButton" Background="Purple" HorizontalAlignment="Left" Height="50" Margin="230,303,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="pinkButton" Background="Pink" HorizontalAlignment="Left" Height="50" Margin="10,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="cyanButton" Background="Cyan" HorizontalAlignment="Left" Height="50" Margin="65,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="darkGreenButton" Background="DarkGreen" HorizontalAlignment="Left" Height="50" Margin="120,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="blackButton" Background="Black" HorizontalAlignment="Left" Height="50" Margin="175,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+      <Button x:Name="whiteButton" Background="White" HorizontalAlignment="Left" Height="50" Margin="230,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
 
       <ScrollViewer x:Name="DrawingContainer" HorizontalAlignment="Right" Height="768" VerticalAlignment="Center" Width="768" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <Canvas x:Name="DrawingCanvas" Height="768" Width="768">
@@ -41,5 +41,6 @@
         <Button HorizontalAlignment="Left" Margin="125,120,0,0" VerticalAlignment="Top" Height="100" Width="100" Click="Zoom_Out" Padding="0" BorderThickness="0">
         <Image Source="Assets/Zoomout.png" />
         </Button>
+        <Button x:Name="UndoButton" Content="Undo" HorizontalAlignment="Left" Margin="230,15,0,0" VerticalAlignment="Top" Height="110" Width="130" Click="Undo_Click" IsEnabled="False"/>
     </Grid>
 </Page>

@@ -266,24 +266,33 @@ namespace pixCellDivision
             rec_children = new Rectangle[10];
             child_index = 0;
             rec_state = true;
-            RecInst.Text = "The Macro has started: Please do things in the following order. Pick, Split, Color.";
+            RecInst.Text = "The Macro has started. Please add commands in the following order: pick, split, color.";
             RecInst.Visibility = Visibility.Visible;
         }
 
         private void stopMacro(object sender, RoutedEventArgs e)
         {
             if (!recorded)
+            {
                 RecInst.Text = "You have not recorded a macro. There is nothing to stop.";
+                RecInst.Visibility = Visibility.Visible;
+            }
             if (rec_state)
+            {
                 rec_state = false;
-            RecInst.Text = "Your macro has stopped recording.";
-            recorded = true;
+                RecInst.Text = "Your macro has stopped recording.";
+                recorded = true;
+            }
         }
 
         private void PlayMacro(object sender, RoutedEventArgs e)
         {
             if (!recorded)
+            {
                 RecInst.Text = "You have not recorded a macro to play yet.";
+                RecInst.Visibility = Visibility.Visible;
+                return;
+            }
             runningmac = true;
             Rectangle current;
             running_array = new Rectangle[10];

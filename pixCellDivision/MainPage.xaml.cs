@@ -51,6 +51,15 @@ namespace pixCellDivision
             this.InitializeComponent();
             selectedRectangle = First_Rectangle;
             Windows.UI.Core.CoreWindow.GetForCurrentThread().KeyDown += Core_KeyDown;
+
+            ZoomIn.Text = "" + '\uE12E';
+            ZoomOut.Text = "" + '\uE1A4';
+            HorizontalSplit.Text = "" + '\uE0CE';
+            VerticalSplit.Text = "" + '\uE0CD';
+            UndoIcon.Text = "" + '\uE10E';
+            RecordIcon.Text = "" + '\uE116';
+            StopIcon.Text = "" + '\uE002';
+            PlayIcon.Text = "" + '\uE102';
         }
 
         /// <summary>

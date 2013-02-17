@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.exe">
       <PackagePath>pixCellDivision.exe</PackagePath>
-      <Modified>2013-02-17T18:28:12.896</Modified>
+      <Modified>2013-02-17T19:45:12.220</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.pdb">
       <PackagePath>pixCellDivision.pdb</PackagePath>
-      <Modified>2013-02-17T18:28:12.863</Modified>
+      <Modified>2013-02-17T19:45:12.200</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Cityscape.jpg">
       <PackagePath>Assets\Cityscape.jpg</PackagePath>
@@ -66,7 +66,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2013-02-17T18:27:37.009</Modified>
+      <Modified>2013-02-17T19:38:52.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

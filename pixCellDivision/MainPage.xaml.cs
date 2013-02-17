@@ -127,7 +127,7 @@ namespace pixCellDivision
                 needrec = false;
                 needsplit = true;
                 RecInst.Text = "Split the rectangle.";
-                stopButton.Visibility = Visibility.Collapsed;
+                disableAndFade(stopButton);
             }   
         }
         private void Core_KeyDown(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
@@ -147,8 +147,8 @@ namespace pixCellDivision
             undoIsColor.Push(false);
             undoResize.Push(oldRect);
             undoDelete.Push(newRect);
-            if (!rec_state && UndoButton.Visibility == Visibility.Collapsed)
-                UndoButton.Visibility = Visibility.Visible;
+            if (!rec_state && !UndoButton.IsEnabled)
+                enableAndUnFade(UndoButton);
         }
 
         private void Hor_Split(Rectangle oldRect)
@@ -283,7 +283,7 @@ namespace pixCellDivision
                 macro[child_index] += senderButton.Content;
                 child_index++;
                 RecInst.Text = "Pick a rectangle.";
-                stopButton.Visibility = Visibility.Visible;
+                enableAndUnFade(stopButton);
             }
 
 
@@ -291,8 +291,8 @@ namespace pixCellDivision
             undoIsColor.Push(true);
             undoColorBrush.Push(selectedRectangle.Fill as SolidColorBrush);
             undoColorRect.Push(selectedRectangle);
-            if (!rec_state && UndoButton.Visibility == Visibility.Collapsed)
-                UndoButton.Visibility = Visibility.Visible;
+            if (!rec_state && !UndoButton.IsEnabled)
+                enableAndUnFade(UndoButton);
 
             selectedRectangle.Fill = brush;
 		}
@@ -307,8 +307,8 @@ namespace pixCellDivision
             rec_state = true;
             RecInst.Text = "The Macro has started. Please add commands in the following order: pick, split, color.";
             RecInst.Visibility = Visibility.Visible;
-            recButton.Visibility = Visibility.Collapsed;
-            playButton.Visibility = Visibility.Collapsed;
+            disableAndFade(recButton);
+            disableAndFade(playButton);
         }
 
         private void stopMacro(object sender, RoutedEventArgs e)
@@ -326,11 +326,11 @@ namespace pixCellDivision
                 needcolor = false;
                 needrec = false;
                 needsplit = false;
-                if (undoIsColor.Count > 0) UndoButton.Visibility = Visibility.Visible;
+                if (undoIsColor.Count > 0) enableAndUnFade(UndoButton);
             }
-            stopButton.Visibility = Visibility.Collapsed;
-            recButton.Visibility = Visibility.Visible;
-            playButton.Visibility = Visibility.Visible;
+            disableAndFade(stopButton);
+            enableAndUnFade(recButton);
+            enableAndUnFade(playButton);
         }
 
         private void PlayMacro(object sender, RoutedEventArgs e)
@@ -417,8 +417,19 @@ namespace pixCellDivision
                 DrawingCanvas.Children.Remove(rectToDelete);
             }
 
-            if (undoIsColor.Count == 0) UndoButton.Visibility = Visibility.Collapsed;
+            if (undoIsColor.Count == 0) disableAndFade(UndoButton);
 
+        }
+
+        void disableAndFade(Button b)
+        {
+            b.IsEnabled = false;
+            b.Opacity = 0.3;
+        }
+        void enableAndUnFade(Button b)
+        {
+            b.IsEnabled = true;
+            b.Opacity = 1;
         }
 
         // settings menu stuff below this point

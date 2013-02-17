@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-02-17T11:05:18.090</Modified>
+      <Modified>2013-02-17T11:25:18.564</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.exe">
       <PackagePath>pixCellDivision.exe</PackagePath>
-      <Modified>2013-02-17T11:05:18.037</Modified>
+      <Modified>2013-02-17T11:25:18.509</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.pdb">
       <PackagePath>pixCellDivision.pdb</PackagePath>
-      <Modified>2013-02-17T11:05:18.012</Modified>
+      <Modified>2013-02-17T11:25:18.484</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\Assets\Horizontal.png">
       <PackagePath>Assets\Horizontal.png</PackagePath>
@@ -90,11 +90,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2013-02-17T09:05:31.975</Modified>
+      <Modified>2013-02-17T11:16:20.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-02-17T09:05:36.558</Modified>
+      <Modified>2013-02-17T11:16:45.079</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

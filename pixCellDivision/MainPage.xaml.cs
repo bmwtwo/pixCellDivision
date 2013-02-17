@@ -262,10 +262,10 @@ namespace pixCellDivision
 					break;
 			}
 
-            needcolor = false;
-            needrec = true;
             if (rec_state)
             {
+                needcolor = false;
+                needrec = true;
                 macro[child_index] += senderButton.Content;
                 child_index++;
                 RecInst.Text = "Pick a rectangle.";
@@ -302,6 +302,9 @@ namespace pixCellDivision
                 rec_state = false;
             RecInst.Text = "Your macro has stopped recording.";
             recorded = true;
+            needcolor = false;
+            needrec = false;
+            needsplit = false;
         }
 
         private void PlayMacro(object sender, RoutedEventArgs e)

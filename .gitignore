@@ -1,6 +1,7 @@
 *.suo
-pixCellDivision/obj/Debug/
+pixCellDivision/obj/Debug/*
 pixCellDivision/pixCellDivision_TemporaryKey.pfx
+pixCellDivision/bin/Debug/*
 *.intermediate
 *.db
 *.user

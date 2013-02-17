@@ -113,6 +113,77 @@ namespace pixCellDivision
             selectedRectangle = senderRect;
             if (!horizontalSplitButton.IsEnabled) horizontalSplitButton.IsEnabled = true;
             if (!verticalSplitButton.IsEnabled) verticalSplitButton.IsEnabled = true;
+			
+			if (!grayButton.IsEnabled) grayButton.IsEnabled = true;
+			if (!redButton.IsEnabled) redButton.IsEnabled = true;
+			if (!blueButton.IsEnabled) blueButton.IsEnabled = true;
+			if (!greenButton.IsEnabled) greenButton.IsEnabled = true;
+			if (!brownButton.IsEnabled) brownButton.IsEnabled = true;
+			if (!orangeButton.IsEnabled) orangeButton.IsEnabled = true;
+			if (!tealButton.IsEnabled) tealButton.IsEnabled = true;
+			if (!magentaButton.IsEnabled) magentaButton.IsEnabled = true;
+			if (!limeButton.IsEnabled) limeButton.IsEnabled = true;
+			if (!purpleButton.IsEnabled) purpleButton.IsEnabled = true;
+			if (!pinkButton.IsEnabled) pinkButton.IsEnabled = true;
+			if (!cyanButton.IsEnabled) cyanButton.IsEnabled = true;
+			if (!darkGreenButton.IsEnabled) darkGreenButton.IsEnabled = true;
+			if (!blackButton.IsEnabled) blackButton.IsEnabled = true;
+			if (!whiteButton.IsEnabled) whiteButton.IsEnabled = true;
         }
+		private void onButtonClick(object sender, RoutedEventArgs e) 
+		{
+			Button senderButton = sender as Button;
+			switch (senderButton.Name)
+			{
+				case "grayButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Gray);	
+					break;
+				case "redButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Red);	
+					break;
+				case "blueButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Blue);	
+					break;	
+				case "greenButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Green);	
+					break;	
+				case "brownButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Brown);	
+					break;	
+				case "orangeButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Orange);	
+					break;	
+				case "tealButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Teal);	
+					break;	
+				case "magentaButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Magenta);	
+					break;	
+				case "limeButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Lime);	
+					break;	
+				case "purpleButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Purple);	
+					break;	
+				case "pinkButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Pink);	
+					break;	
+				case "cyanButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Cyan);	
+					break;	
+				case "darkGreenButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.DarkGreen);	
+					break;	
+				case "blackButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.Black);	
+					break;	
+				case "whiteButton":
+					selectedRectangle.Fill = new SolidColorBrush(Colors.White);	
+					break;	
+				
+				default:
+					break;
+			}
+		}
     }
 }

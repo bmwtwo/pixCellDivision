@@ -26,6 +26,8 @@ namespace pixCellDivision
     public sealed partial class MainPage : Page
     {
         Rectangle selectedRectangle;
+        SolidColorBrush DEFAULT_STROKE  = new SolidColorBrush(Colors.LightGray);
+        SolidColorBrush SELECTED_STROKE = new SolidColorBrush(Colors.Black);
 
         // record undo type
         Stack<Boolean> undoIsColor            = new Stack<Boolean>();
@@ -67,7 +69,7 @@ namespace pixCellDivision
         {
             Rectangle newRect = new Rectangle();
             newRect.Fill = oldRect.Fill;
-            newRect.Stroke = new SolidColorBrush(Colors.Black);
+            newRect.Stroke = DEFAULT_STROKE;
             newRect.Tapped += new TappedEventHandler(Rectangle_Tapped);
             return newRect;
         }
@@ -85,8 +87,8 @@ namespace pixCellDivision
         private void Rectangle_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Rectangle senderRect = sender as Rectangle;
-            selectedRectangle.Stroke = new SolidColorBrush(Colors.Transparent);
-            senderRect.Stroke = new SolidColorBrush(Colors.Blue);
+            selectedRectangle.Stroke = DEFAULT_STROKE;
+            senderRect.Stroke = SELECTED_STROKE;
             selectedRectangle = senderRect;
         } 
 
@@ -240,7 +242,7 @@ namespace pixCellDivision
                 if (rectToDelete == selectedRectangle)
                 {
                     selectedRectangle = First_Rectangle;
-                    First_Rectangle.Stroke = new SolidColorBrush(Colors.Blue);
+                    First_Rectangle.Stroke = SELECTED_STROKE;
                 }
                 DrawingCanvas.Children.Remove(rectToDelete);
             }

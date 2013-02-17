@@ -7,13 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Background="#FFFF2929">
 
-    <Grid x:Name="MainGrid" Background="#FFA09C9C" >
+    <Grid x:Name="MainGrid" Background="#FFA09C9C" AllowDrop="True" >
         <Button x:Name="verticalSplitButton" HorizontalAlignment="Left" Margin="125,15,0,0" VerticalAlignment="Top" Height="100" Width="100" Click="Vertical_Split_Clicked" Padding="0" BorderBrush="{x:Null}" BorderThickness="0">
             <Image Source="Assets/Horizantalna.png" />
         </Button>
         <Button x:Name="horizontalSplitButton" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="100" Width="100" Click="Horizontal_Split_Clicked" Padding="0" BorderThickness="0">
             <Image Source="Assets/Vertical.png" />  
         </Button>
+
       <Button x:Name="grayButton" Background="Gray" Content="Gr" HorizontalAlignment="Left" Height="50" Margin="10,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
       <Button x:Name="redButton" Background="Red" Content="Re" HorizontalAlignment="Left" Height="50" Margin="65,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
       <Button x:Name="blueButton" Background="Blue" Content="Bl" HorizontalAlignment="Left" Height="50" Margin="120,248,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
@@ -29,6 +30,7 @@
       <Button x:Name="darkGreenButton" Background="DarkGreen" Content="Dg" HorizontalAlignment="Left" Height="50" Margin="120,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
       <Button x:Name="blackButton" Background="Black" Content="Bk" HorizontalAlignment="Left" Height="50" Margin="175,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
       <Button x:Name="whiteButton" Background="White" Content="Wh" HorizontalAlignment="Left" Height="50" Margin="230,358,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0" Click="onButtonClick"  />
+
 
       <ScrollViewer x:Name="DrawingContainer" HorizontalAlignment="Right" Height="768" VerticalAlignment="Center" Width="768" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <Canvas x:Name="DrawingCanvas" Height="768" Width="768">
@@ -51,5 +53,6 @@
         <Button HorizontalAlignment="Left" Margin="10,536,0,0" VerticalAlignment="Top" Height="100" Width="100" Click="PlayMacro" Padding="0" BorderThickness="0">
         <Image Source="Assets/PlayMac.png" />
         </Button>
+        <Button x:Name="UndoButton" Content="Undo" HorizontalAlignment="Left" Margin="230,15,0,0" VerticalAlignment="Top" Height="110" Width="130" Click="Undo_Click" IsEnabled="False"/>
     </Grid>
 </Page>

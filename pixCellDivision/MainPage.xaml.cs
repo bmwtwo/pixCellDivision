@@ -26,6 +26,7 @@ namespace pixCellDivision
     public sealed partial class MainPage : Page
     {
         Rectangle selectedRectangle;
+
         String[] macro;
         Boolean rec_state = false;
         Rectangle[] rec_children;
@@ -33,6 +34,16 @@ namespace pixCellDivision
         Boolean runningmac = false;
         Rectangle[] running_array;
         int child_index;
+
+        // record undo type
+        Stack<Boolean> undoIsColor            = new Stack<Boolean>();
+        // record details of color undos
+        Stack<Rectangle> undoColorRect        = new Stack<Rectangle>();
+        Stack<SolidColorBrush> undoColorBrush = new Stack<SolidColorBrush>();
+        // record details of splitting undos
+        Stack<Rectangle> undoResize           = new Stack<Rectangle>();
+        Stack<Rectangle> undoDelete           = new Stack<Rectangle>();
+
         public MainPage()   
         {
             this.InitializeComponent();
@@ -98,11 +109,23 @@ namespace pixCellDivision
         }
         private void Core_KeyDown(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
         {
-            System.Diagnostics.Debug.WriteLine(args.VirtualKey);
             if (args.VirtualKey == Windows.System.VirtualKey.H)
                 Hor_Split(selectedRectangle);
             else if (args.VirtualKey == Windows.System.VirtualKey.V)
                 Ver_Split(selectedRectangle);
+            else if (args.VirtualKey == Windows.System.VirtualKey.U || args.VirtualKey == Windows.System.VirtualKey.Z)
+                undo();
+        }
+
+        private void performCommonSplitTasks(Rectangle oldRect, Rectangle newRect)
+        {
+            DrawingCanvas.Children.Add(newRect);
+
+            undoIsColor.Push(false);
+            undoResize.Push(oldRect);
+            undoDelete.Push(newRect);
+            if (UndoButton.IsEnabled != true)
+                UndoButton.IsEnabled = true;
         }
 
         private void Hor_Split(Rectangle oldRect)
@@ -119,7 +142,7 @@ namespace pixCellDivision
                 oldRect.Margin.Right,
                 oldRect.Margin.Bottom
             );
-            DrawingCanvas.Children.Add(newRect);
+            performCommonSplitTasks(oldRect, newRect);
 
             oldRect.Height = newHeight;
             if (rec_state)
@@ -146,7 +169,7 @@ namespace pixCellDivision
                 oldRect.Margin.Right,
                 oldRect.Margin.Bottom
             );
-            DrawingCanvas.Children.Add(newRect);
+            performCommonSplitTasks(oldRect, newRect);
 
             oldRect.Width = newWidth;
             if (rec_state)
@@ -164,63 +187,75 @@ namespace pixCellDivision
 
 		private void onButtonClick(object sender, RoutedEventArgs e) 
 		{
+            Color newColor;
 			Button senderButton = sender as Button;
 			switch (senderButton.Name)
 			{
 				case "grayButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Gray);	
+					newColor = Colors.Gray;	
 					break;
 				case "redButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Red);	
+					newColor = Colors.Red;	
 					break;
 				case "blueButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Blue);	
+					newColor = Colors.Blue;	
 					break;	
 				case "greenButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Green);	
+					newColor = Colors.Green;	
 					break;	
 				case "brownButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Brown);	
+					newColor = Colors.Brown;	
 					break;	
 				case "orangeButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Orange);	
+					newColor = Colors.Orange;	
 					break;	
 				case "tealButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Teal);	
+					newColor = Colors.Teal;	
 					break;	
 				case "magentaButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Magenta);	
+					newColor = Colors.Magenta;	
 					break;	
 				case "limeButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Lime);	
+					newColor = Colors.Lime;	
 					break;	
 				case "purpleButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Purple);	
+					newColor = Colors.Purple;	
 					break;	
 				case "pinkButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Pink);	
+					newColor = Colors.Pink;	
 					break;	
 				case "cyanButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Cyan);	
+					newColor = Colors.Cyan;	
 					break;	
 				case "darkGreenButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.DarkGreen);	
+					newColor = Colors.DarkGreen;	
 					break;	
 				case "blackButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.Black);	
+					newColor = Colors.Black;	
 					break;	
 				case "whiteButton":
-					selectedRectangle.Fill = new SolidColorBrush(Colors.White);	
+					newColor = Colors.White;	
 					break;	
 				default:
 					break;
 			}
+
             if (rec_state)
             {
                 macro[child_index] += senderButton.Content;
                 child_index++;
                 RecInst.Text = "Pick a rectangle.";
             }
+
+
+            SolidColorBrush brush = new SolidColorBrush(newColor);
+            undoIsColor.Push(true);
+            undoColorBrush.Push(selectedRectangle.Fill as SolidColorBrush);
+            undoColorRect.Push(selectedRectangle);
+            if (UndoButton.IsEnabled == false)
+                UndoButton.IsEnabled = true;
+
+            selectedRectangle.Fill = brush;
 		}
 
         private void recMacro(object sender, RoutedEventArgs e)
@@ -282,6 +317,43 @@ namespace pixCellDivision
             }
             runningmac = false;
             child_index = times;
+        }
+
+
+
+        private void Undo_Click(object sender, RoutedEventArgs e)
+        {
+            undo();
+        }
+
+        private void undo()
+        {
+            if (undoIsColor.Count == 0) return; // can't undo
+
+            if (undoIsColor.Pop() == true)
+            {
+                MessageDialog d = new MessageDialog("here");
+                undoColorRect.Pop().Fill = undoColorBrush.Pop();
+            }
+            else { // undo a split
+                Rectangle rectToDelete = undoDelete.Pop();
+                Rectangle rectToResize = undoResize.Pop();
+                // if the squares have the same left margin, undoDelete must be directly below undoResize
+                if (rectToDelete.Margin.Left == rectToResize.Margin.Left)
+                    rectToResize.Height *= 2;
+                else
+                    rectToResize.Width *= 2;
+
+                if (rectToDelete == selectedRectangle)
+                {
+                    selectedRectangle = First_Rectangle;
+                    First_Rectangle.Stroke = new SolidColorBrush(Colors.Blue);
+                }
+                DrawingCanvas.Children.Remove(rectToDelete);
+            }
+
+            if (undoIsColor.Count == 0) UndoButton.IsEnabled = false;
+
         }
     }
 }

@@ -29,6 +29,9 @@ namespace pixCellDivision
         SolidColorBrush DEFAULT_STROKE  = new SolidColorBrush(Colors.LightGray);
         SolidColorBrush SELECTED_STROKE = new SolidColorBrush(Colors.Black);
 
+        Boolean needrec = false;
+        Boolean needsplit = false;
+        Boolean needcolor = false;
         String[] macro;
         Boolean rec_state = false;
         Rectangle[] rec_children;
@@ -103,6 +106,8 @@ namespace pixCellDivision
 
         private void Rectangle_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (needsplit || needcolor)
+                return;
             Rectangle senderRect = sender as Rectangle;
             selectedRectangle.Stroke = DEFAULT_STROKE;
             senderRect.Stroke = SELECTED_STROKE;
@@ -111,10 +116,12 @@ namespace pixCellDivision
             if (rec_state)
             {
                 int srcindex = 0;
-                for (int i = 0; i < child_index; i++)
+                for (int i = 0; i <= child_index; i++)
                     if (selectedRectangle.Equals(rec_children[i]))
                         srcindex = i;
                 macro[child_index] += srcindex + "";
+                needrec = false;
+                needsplit = true;
                 RecInst.Text = "Split the rectangle.";
             }   
         }
@@ -141,6 +148,8 @@ namespace pixCellDivision
 
         private void Hor_Split(Rectangle oldRect)
         {
+            if (needcolor || needrec)
+                return;
             double newHeight = oldRect.Height / 2;
             double newTopMargin = oldRect.Margin.Top + newHeight;
 
@@ -158,16 +167,23 @@ namespace pixCellDivision
             oldRect.Height = newHeight;
             if (rec_state)
             {
+                needcolor = true;
+                needsplit = false;
                 rec_children[child_index + 1] = newRect;
                 macro[child_index] += "h";
                 RecInst.Text = "Pick a color.";
             }
             if (runningmac)
+            {
                 running_array[child_index + 1] = newRect;
+                child_index++;
+            }
         }
 
         private void Ver_Split(Rectangle oldRect)
         {
+            if (needrec || needcolor)
+                return;
             double newWidth = oldRect.Width / 2;
             double newLeftMargin = oldRect.Margin.Left + newWidth;
 
@@ -185,6 +201,8 @@ namespace pixCellDivision
             oldRect.Width = newWidth;
             if (rec_state)
             {
+                needsplit = false;
+                needcolor = true;
                 rec_children[child_index + 1] = newRect;
                 macro[child_index] += "v";
                 RecInst.Text = "Pick a color.";
@@ -198,6 +216,8 @@ namespace pixCellDivision
 
 		private void onButtonClick(object sender, RoutedEventArgs e) 
 		{
+            if (needrec == true || needsplit == true)
+                return;
             Color newColor;
 			Button senderButton = sender as Button;
 			switch (senderButton.Name)
@@ -253,6 +273,8 @@ namespace pixCellDivision
 
             if (rec_state)
             {
+                needcolor = false;
+                needrec = true;
                 macro[child_index] += senderButton.Content;
                 child_index++;
                 RecInst.Text = "Pick a rectangle.";
@@ -271,8 +293,10 @@ namespace pixCellDivision
 
         private void recMacro(object sender, RoutedEventArgs e)
         {
+            needrec = true;
             macro = new String[10];
-            rec_children = new Rectangle[10];
+            rec_children = new Rectangle[11];
+            rec_children[0] = selectedRectangle;
             child_index = 0;
             rec_state = true;
             RecInst.Text = "The Macro has started. Please add commands in the following order: pick, split, color.";
@@ -291,7 +315,11 @@ namespace pixCellDivision
                 rec_state = false;
                 RecInst.Text = "Your macro has stopped recording.";
                 recorded = true;
+                needcolor = false;
+                needrec = false;
+                needsplit = false;
             }
+
         }
 
         private void PlayMacro(object sender, RoutedEventArgs e)
@@ -304,12 +332,15 @@ namespace pixCellDivision
             }
             runningmac = true;
             Rectangle current;
-            running_array = new Rectangle[10];
+            rec_state = false;
+            running_array = new Rectangle[11];
             running_array[0] = selectedRectangle;
             int times = child_index;
-            for (int i = 0; i < times; i++)
+            child_index = 0;
+            for (int i = 0; i < 10; i++)
             {
-                child_index = 0;
+                if (macro[i] == null)
+                    break;
                 current = running_array[int.Parse(macro[i][0] + "")];
                 switch (macro[i][1])
                 {
@@ -334,6 +365,7 @@ namespace pixCellDivision
                     case "Bk": current.Fill = new SolidColorBrush(Colors.Black); break;
                     case "Wh": current.Fill = new SolidColorBrush(Colors.White); break;
                 }
+                DrawingCanvas.Visibility = Windows.UI.Xaml.Visibility.Visible;
             }
             runningmac = false;
             child_index = times;
@@ -348,6 +380,8 @@ namespace pixCellDivision
 
         private void undo()
         {
+            if (needsplit || needrec || needcolor)
+                return;
             if (undoIsColor.Count == 0) return; // can't undo
 
             if (undoIsColor.Pop() == true)

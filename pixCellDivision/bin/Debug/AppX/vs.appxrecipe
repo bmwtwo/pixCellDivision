@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-02-17T12:08:20.470</Modified>
+      <Modified>2013-02-17T12:15:34.316</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.exe">
       <PackagePath>pixCellDivision.exe</PackagePath>
-      <Modified>2013-02-17T12:08:20.335</Modified>
+      <Modified>2013-02-17T12:15:34.217</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\pixCellDivision.pdb">
       <PackagePath>pixCellDivision.pdb</PackagePath>
-      <Modified>2013-02-17T12:08:20.312</Modified>
+      <Modified>2013-02-17T12:15:34.160</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -58,11 +58,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2013-02-17T12:06:27.585</Modified>
+      <Modified>2013-02-17T12:13:59.238</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-02-17T12:08:20.383</Modified>
+      <Modified>2013-02-17T12:12:21.718</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

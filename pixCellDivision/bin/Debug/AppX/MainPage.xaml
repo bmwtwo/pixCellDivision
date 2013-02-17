@@ -103,6 +103,7 @@
                 <Button x:ConnectionId='23' x:Name="whiteButton" Background="White" Content="Wh" HorizontalAlignment="Left" Height="50" Margin="130,593,0,0" VerticalAlignment="Top" Width="50" Opacity="1.0"                       Foreground="Black" Padding="0" BorderBrush="Black"  />
                 
                 <TextBlock x:Name="RecInst" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" Height="70" Width="229" FontFamily="Global User Interface" Text="Test" Visibility="Collapsed" Foreground="Black" Margin="10,0,0,0" FontSize="16"/>
+
             </Grid>
         </Border>
     </Grid>

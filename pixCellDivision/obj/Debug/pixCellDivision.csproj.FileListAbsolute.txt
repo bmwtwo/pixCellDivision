@@ -48,3 +48,7 @@ C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\obj\Debug\resources
 C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\obj\Debug\pri.resfiles
 C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\obj\Debug\LanguageQualifiers.txt
 C:\Users\smthr_000\Documents\pixCellDivision\pixCellDivision\obj\Debug\ProjectArchitectures.txt
+C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\obj\Debug\priconfig.xml.intermediate
+C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\obj\Debug\layout.resfiles.intermediate
+C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\obj\Debug\resources.resfiles.intermediate
+C:\Users\Brendan\Documents\Visual Studio 2012\Projects\pixCellDivision\pixCellDivision\obj\Debug\pri.resfiles.intermediate

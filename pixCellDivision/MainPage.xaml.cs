@@ -30,6 +30,7 @@ namespace pixCellDivision
         {
             this.InitializeComponent();
             selectedRectangle = First_Rectangle;
+            Windows.UI.Core.CoreWindow.GetForCurrentThread().KeyDown += Core_KeyDown;
         }
 
         /// <summary>
@@ -39,12 +40,6 @@ namespace pixCellDivision
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-        }
-
-        private async void ScrollViewer_ManipulationStarted_1(object sender, ManipulationStartedRoutedEventArgs e)
-        {
-            /*MessageDialog dialog = new MessageDialog("test", "test2");
-            await dialog.ShowAsync();*/
         }
 
         private void Zoom_Out(object sender, RoutedEventArgs e)
@@ -58,31 +53,27 @@ namespace pixCellDivision
             DrawingContainer.ZoomToFactor(DrawingContainer.ZoomFactor + 1);
         }
 
-        Rectangle getNewRectangle(Rectangle old)
+        Rectangle getNewRectangle(Rectangle oldRect)
         {
             Rectangle newRect = new Rectangle();
-            newRect.Fill = old.Fill;
+            newRect.Fill = oldRect.Fill;
             newRect.Stroke = new SolidColorBrush(Colors.Black);
             newRect.Tapped += new TappedEventHandler(Rectangle_Tapped);
-            newRect.KeyDown += new KeyEventHandler(KeyDown_L);
             return newRect;
         }
 
-        private void Vertical_Split(object sender, RoutedEventArgs e)
+        private void Vertical_Split_Clicked(object sender, RoutedEventArgs e)
         {
             Ver_Split(selectedRectangle);
         }
 
-        private void Horizontal_Split(object sender, RoutedEventArgs e)
+        private void Horizontal_Split_Clicked(object sender, RoutedEventArgs e)
         {
             Hor_Split(selectedRectangle);
         }
 
         private void Rectangle_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            MessageDialog dialog;
-            //dialog = new MessageDialog(sender.GetType().FullName, "test2");
-            //dialog.ShowAsync();
             Rectangle senderRect = sender as Rectangle;
             if (selectedRectangle != null)
                 selectedRectangle.Stroke = new SolidColorBrush(Colors.Transparent);
@@ -90,61 +81,53 @@ namespace pixCellDivision
             selectedRectangle = senderRect;
             if (!horizontalSplitButton.IsEnabled) horizontalSplitButton.IsEnabled = true;
             if (!verticalSplitButton.IsEnabled) verticalSplitButton.IsEnabled = true;
-            dialog = new MessageDialog(FocusManager.GetFocusedElement().GetType().FullName, "test2");
-            dialog.ShowAsync();
         } 
 
-        private void KeyDown_L(object sender, KeyRoutedEventArgs e)
+        private void Core_KeyDown(Windows.UI.Core.CoreWindow sender, Windows.UI.Core.KeyEventArgs args)
         {
- //           MessageDialog dialog2;
-                if (e.Key == Windows.System.VirtualKey.H)
-                {
-                    Hor_Split(selectedRectangle);
-                }
-                else if (e.Key == Windows.System.VirtualKey.V)
-                    Ver_Split(selectedRectangle);
- //           if (!sender.Equals(selectedRectangle))
- //               dialog2 = new MessageDialog("Not working", "test2");
+            System.Diagnostics.Debug.WriteLine(args.VirtualKey);
+            if (args.VirtualKey == Windows.System.VirtualKey.H)
+                Hor_Split(selectedRectangle);
+            else if (args.VirtualKey == Windows.System.VirtualKey.V)
+                Ver_Split(selectedRectangle);
         }
 
-        private void Hor_Split(Rectangle parent)
+        private void Hor_Split(Rectangle oldRect)
         {
-            //MessageDialog dialog;
-            double newHeight = parent.Height / 2;
-            double newTopMargin = parent.Margin.Top + newHeight;
+            double newHeight = oldRect.Height / 2;
+            double newTopMargin = oldRect.Margin.Top + newHeight;
 
-            Rectangle newRect = getNewRectangle(parent);
+            Rectangle newRect = getNewRectangle(oldRect);
             newRect.Height = newHeight;
-            newRect.Width = parent.Width;
+            newRect.Width = oldRect.Width;
             newRect.Margin = new Thickness(
-                parent.Margin.Left,
+                oldRect.Margin.Left,
                 newTopMargin,
-                parent.Margin.Right,
-                parent.Margin.Bottom
+                oldRect.Margin.Right,
+                oldRect.Margin.Bottom
             );
             DrawingCanvas.Children.Add(newRect);
 
-            parent.Height = newHeight;
-            //dialog = new MessageDialog(FocusManager.GetFocusedElement().GetType().FullName, "test2");
-            //dialog.ShowAsync();
+            oldRect.Height = newHeight;
         }
-        private void Ver_Split(Rectangle parent)
-        {
-            double newWidth = parent.Width / 2;
-            double newLeftMargin = parent.Margin.Left + newWidth;
 
-            Rectangle newRect = getNewRectangle(parent);
+        private void Ver_Split(Rectangle oldRect)
+        {
+            double newWidth = oldRect.Width / 2;
+            double newLeftMargin = oldRect.Margin.Left + newWidth;
+
+            Rectangle newRect = getNewRectangle(oldRect);
             newRect.Width = newWidth;
-            newRect.Height = parent.Height;
+            newRect.Height = oldRect.Height;
             newRect.Margin = new Thickness(
                 newLeftMargin,
-                parent.Margin.Top,
-                parent.Margin.Right,
-                parent.Margin.Bottom
+                oldRect.Margin.Top,
+                oldRect.Margin.Right,
+                oldRect.Margin.Bottom
             );
             DrawingCanvas.Children.Add(newRect);
 
-            parent.Width = newWidth; 
+            oldRect.Width = newWidth; 
         }
     }
 }

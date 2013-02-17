@@ -10,11 +10,11 @@
 
 
 
-    <Grid Background="#FFA09C9C" KeyDown="KeyDown_L">
-        <Button x:Name="horizontalSplitButton" HorizontalAlignment="Left" Margin="125,15,0,0" VerticalAlignment="Top" Height="100" Width="100" Click="Horizontal_Split" IsEnabled="False" Padding="0" BorderBrush="{x:Null}" BorderThickness="0">
+    <Grid x:Name="MainGrid" Background="#FFA09C9C" >
+        <Button x:Name="verticalSplitButton" HorizontalAlignment="Left" Margin="125,15,0,0" VerticalAlignment="Top" Height="100" Width="100" Click="Vertical_Split_Clicked" Padding="0" BorderBrush="{x:Null}" BorderThickness="0">
             <Image Source="Assets/Horizantalna.png" />
         </Button>
-        <Button x:Name="verticalSplitButton" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="100" Width="100" IsEnabled="False" Click="Vertical_Split" Padding="0" BorderThickness="0">
+        <Button x:Name="horizontalSplitButton" HorizontalAlignment="Left" Margin="10,15,0,0" VerticalAlignment="Top" Height="100" Width="100" Click="Horizontal_Split_Clicked" Padding="0" BorderThickness="0">
             <Image Source="Assets/Vertical.png" />  
         </Button>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="378,277,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
@@ -32,9 +32,9 @@
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="488,387,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="543,387,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="598,387,0,0" Stroke="Black" VerticalAlignment="Top" Width="50"/>
-        <ScrollViewer x:Name="DrawingContainer" HorizontalAlignment="Right" Height="768" VerticalAlignment="Center" Width="768" ManipulationStarted="ScrollViewer_ManipulationStarted_1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" KeyDown="KeyDown_L">
-            <Canvas x:Name="DrawingCanvas" Height="768" Width="768" >
-                <Rectangle x:Name="First_Rectangle" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="768" Stroke="Black" VerticalAlignment="Top" Width="768" Tapped="Rectangle_Tapped"/>
+        <ScrollViewer x:Name="DrawingContainer" HorizontalAlignment="Right" Height="768" VerticalAlignment="Center" Width="768" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <Canvas x:Name="DrawingCanvas" Height="768" Width="768">
+                <Rectangle x:Name="First_Rectangle" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="768" VerticalAlignment="Top" Width="768" Tapped="Rectangle_Tapped" Stroke="Blue"/>
             </Canvas>
         </ScrollViewer>
         <Button HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Height="100" Width="100" Click="Zoom_In" Padding="0" BorderThickness="0">

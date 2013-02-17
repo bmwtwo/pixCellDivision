@@ -5,6 +5,7 @@ using System.Linq;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
+using Windows.UI.ApplicationSettings;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -63,6 +64,9 @@ namespace pixCellDivision
             RecordIcon.Text = "" + '\uE116';
             StopIcon.Text = "" + '\uE002';
             PlayIcon.Text = "" + '\uE102';
+
+            // add settings options
+            SettingsPane.GetForCurrentView().CommandsRequested += onSettingsCommandsRequested;
         }
 
         /// <summary>
@@ -408,6 +412,20 @@ namespace pixCellDivision
 
             if (undoIsColor.Count == 0) UndoButton.IsEnabled = false;
 
+        }
+
+        // settings menu stuff below this point
+        void onEmailCommand(IUICommand command)
+        {
+            Uri uri = new Uri("mailto:bmwtwo@princeton.edu?subject=pixCellDivision%20Feedback");
+            Windows.System.Launcher.LaunchUriAsync(uri);
+        }
+
+        void onSettingsCommandsRequested(SettingsPane settingsPane, SettingsPaneCommandsRequestedEventArgs eventArgs)
+        {
+            UICommandInvokedHandler handler = new UICommandInvokedHandler(onEmailCommand);
+            SettingsCommand emailCommand = new SettingsCommand("helpPage", "Tips & Feedback", handler);
+            eventArgs.Request.ApplicationCommands.Add(emailCommand);
         }
     }
 }
